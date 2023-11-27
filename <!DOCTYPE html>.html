@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .hoge::after {
+            content: "\f061";
+            font-family: 'FontAwesome';
+            font-weight: 900;
+        }
+
+        .fa-arrow-right {
+            transform: rotate(45deg) translateX(30px);
+        }
+
+        .hoge {
+            cursor: pointer;
+            transition-duration: 3s;
+        }
+
+        .hoge:hover {
+            background-color: #f00;
+        }
+
+        a {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn01 {
+            border: 2px solid;
+            background-color: #ddd;
+            color: #000;
+            transition: .3s .5s;
+            /* transition-duration: .3s;
+            transition-delay: .5s; */
+        }
+
+        .btn01:hover {
+            background-color: #000;
+            color: #ddd;
+        }
+
+
+
+        .text01 {
+            /* for first text */
+            color: #dfdfdf;
+            text-shadow: 0 0 2px #dfdfdf,
+                -4px 5px 0 #b8b8b8,
+                -7px 11px 0 #747474,
+                -12px 17px 0 #343434,
+                -17px 23px 0 #000;
+        }
+
+        .text01 {
+            /* for second text */
+            color: #67875d;
+            text-shadow: 0 0 2px #67875d,
+                -4px 5px 0 #5d7755,
+                -7px 11px 0 #4d6047,
+                -12px 17px 0 #2e382b,
+                -17px 23px 0 #000;
+        }
+
+        .btn02 {
+            border: 2px solid;
+            background-color: #ddd;
+            color: #000;
+        }
+
+        .btn02:hover {
+            transform: translateY(-3px);
+            transition: .3s;
+            box-shadow: 0 2px 3px 0 #666;
+        }
+
+        /* linear-gradient(開始の色, 終了の色); */
+
+        .btn03 {
+            background: linear-gradient(90deg, #ff0000, #ffff00);
+        }
+
+        .img01 {
+            filter: blur(5px);
+        }
+
+        .input01:focus {
+            background-color: #ddd;
+        }
+
+        /* 周りの青い影を打ち消す */
+        .input01:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <i class="fa-solid fa-arrow-right"></i>
+    <p class="hoge"></p>
+
+    <a class="btn01" href="#">練習</a>
+
+    <p class="text01">テキストシャドウ</p>
+
+    <a class="btn02" href="#">上に移動し影がついて浮き上がる</a>
+
+    <a class="btn03" href="#">グラデーション</a>
+
+    <img class="img01" src="https://picsum.photos/300/200" alt="">
+
+    <input class="input01" type="text">
+</body>
+
+</html>
